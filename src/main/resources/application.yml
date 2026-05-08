@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ClickGood
+  datasource:
+    url: jdbc:mysql://localhost:3306/clickgood?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456  # 请替换为你的实际密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    servlet:
+      path: /api
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印 SQL 日志
+    map-underscore-to-camel-case: true  # 下划线转驼峰
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
