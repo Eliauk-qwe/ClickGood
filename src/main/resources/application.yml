@@ -1,3 +1,9 @@
+server:
+  port: 8888
+  servlet:
+      path: /api
+
+
 spring:
   application:
     name: ClickGood
@@ -6,9 +12,9 @@ spring:
     username: root
     password: 123456  # 请替换为你的实际密码
     driver-class-name: com.mysql.cj.jdbc.Driver
-  mvc:
-    servlet:
-      path: /api
+  
+
+
 
 mybatis-plus:
   configuration:

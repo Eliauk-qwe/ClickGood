@@ -28,6 +28,8 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <!-- Spring Boot 3.5.x 使用的 Spring Framework 版本较新，需要较新的 springdoc。 -->
+        <springdoc.version>2.8.9</springdoc.version>
     </properties>
 
 
@@ -58,6 +60,13 @@
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
             <version>4.4.0</version>
+        </dependency>
+
+        <!-- 覆盖 knife4j 传递引入的旧版 springdoc，避免运行时 NoSuchMethodError。 -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
 
         <dependency>
