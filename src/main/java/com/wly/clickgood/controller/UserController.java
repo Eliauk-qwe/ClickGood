@@ -23,6 +23,10 @@ public class UserController {
     public BaseResponse<User> login(@RequestParam("userid") Long userId, HttpServletRequest request) {
         User user = userService.getById(userId);
         
+
+    //     Session ABC123:
+    // loginUser -> User(id=1, username="zhangsan")
+
         request.getSession().setAttribute(UserConstant.LOGIN_USER, user);
         /*
         浏览器第一次请求
@@ -40,9 +44,31 @@ public class UserController {
         从 Session 里拿到 User
 
         */
+
+        // Session = 服务器上的储物柜
+        // JSESSIONID = 储物柜号码牌
+        // Cookie = 浏览器保存号码牌的地方
+        // User = 放进储物柜里的东西
+
         return ResultUtils.success(user);
     }
 
+// 登录时：
+
+// text
+
+
+// 服务器创建 123 号储物柜
+// 把 User 放进去
+// 把 123 号号码牌给浏览器
+// 之后请求时：
+
+// text
+
+
+// 浏览器拿着 123 号号码牌来
+// 服务器找到 123 号储物柜
+// 从里面取出 User
 
     @GetMapping("get/login")
     public BaseResponse<User> getLoginUser(HttpServletRequest request){
