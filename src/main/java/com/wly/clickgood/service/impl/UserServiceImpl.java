@@ -3,6 +3,10 @@ package com.wly.clickgood.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wly.clickgood.model.entity.User;
 import com.wly.clickgood.service.UserService;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import com.wly.clickgood.constant.UserConstant;
 import com.wly.clickgood.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +18,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService{
+        
+        public User getLoginUser (HttpServletRequest request){
+            return (User) request.getSession().getAttribute(UserConstant.LOGIN_USER);
+        }
 
 }
 

@@ -8,8 +8,8 @@ spring:
   application:
     name: ClickGood
   datasource:
-    url: jdbc:mysql://localhost:3306/clickgood?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
+    url: jdbc:mysql://localhost:3306/ClickGood_DB?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: wly
     password: 123456  # 请替换为你的实际密码
     driver-class-name: com.mysql.cj.jdbc.Driver
   

@@ -1,6 +1,9 @@
 package com.wly.clickgood.service;
 
 import com.wly.clickgood.model.entity.User;
+
+import jakarta.servlet.http.HttpServletRequest;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,5 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2026-05-08 19:24:34
 */
 public interface UserService extends IService<User> {
+    public User getLoginUser (HttpServletRequest request);
+
 
 }

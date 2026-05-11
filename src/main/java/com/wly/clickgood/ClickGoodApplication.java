@@ -1,5 +1,6 @@
 package com.wly.clickgood;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * <p>@SpringBootApplication 会让 Spring Boot 从当前包开始扫描 Controller、配置类、异常处理器等组件。</p>
  */
+@MapperScan("com.wly.clickgood.mapper")
 @SpringBootApplication
 public class ClickGoodApplication {
 

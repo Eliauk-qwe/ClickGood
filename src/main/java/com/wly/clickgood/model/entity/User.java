@@ -13,6 +13,7 @@ import lombok.Data;
  */
 @TableName(value ="user")
 @Data
+//Serializable   表示 User 对象可以被序列化
 public class User implements Serializable {
     /**
      * 
