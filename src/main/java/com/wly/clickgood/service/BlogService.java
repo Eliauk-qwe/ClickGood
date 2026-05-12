@@ -1,7 +1,12 @@
 package com.wly.clickgood.service;
 
+import org.springframework.boot.autoconfigure.graphql.GraphQlProperties.Http;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wly.clickgood.model.entity.Blog;
+import com.wly.clickgood.model.vo.BlogVo;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
 * @author wly
@@ -9,5 +14,6 @@ import com.wly.clickgood.model.entity.Blog;
 * @createDate 2026-05-08 19:17:05
 */
 public interface BlogService extends IService<Blog> {
+    BlogVo getBlogVoById(long blogId,HttpServletRequest request);
 
 }

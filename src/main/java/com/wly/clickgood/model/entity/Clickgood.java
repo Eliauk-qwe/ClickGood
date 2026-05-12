@@ -24,17 +24,20 @@ public class Clickgood implements Serializable {
     /**
      * 
      */
-    private Long userid;
+    @TableField("userId")
+    private Long userId;
 
     /**
      * 
      */
-    private Long blogid;
+    @TableField("blogId")
+    private Long blogId;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    @TableField("createTime")
+    private Date createTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
