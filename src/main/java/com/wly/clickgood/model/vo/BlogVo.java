@@ -13,8 +13,9 @@ public class BlogVo {
     private String content;
     private String coverImg;
     private Date createTime;
-    private Integer clickGoodCount;
-    private boolean hasClickGood;
+    // 改之后
+    private Integer thumbCount;
+    private Boolean hasClickGood;
 
     
 }

@@ -1,5 +1,7 @@
 package com.wly.clickgood.service;
 
+import java.util.List;
+
 import org.springframework.boot.autoconfigure.graphql.GraphQlProperties.Http;
 
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -15,5 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 */
 public interface BlogService extends IService<Blog> {
     BlogVo getBlogVoById(long blogId,HttpServletRequest request);
+    List<BlogVo>  getBlogVoList(List<Blog> bloglist,HttpServletRequest request);
+
 
 }
